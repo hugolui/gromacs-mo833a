@@ -6,7 +6,7 @@ compiler: gcc
 before install:
 - sudo apt-get update
 - sudo apt-get -y install build-essential libssl-dev 
-- sudo apt-get -y install libclang1-9i
+- sudo apt-get -y install libclang1-9
 
 # Download and install CMAKE 3.20.0 and install Gromacs 
 install:
