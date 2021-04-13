@@ -7,6 +7,6 @@ service:
   - docker
 
 before install:
-- docker image built -t ${image_name} .
+- docker image build -t ${image_name} .
 
 
