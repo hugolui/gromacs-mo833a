@@ -15,7 +15,3 @@ RUN cd /opt \
     && ./bootstrap \
     && make \
     && make install
-
-
-
-

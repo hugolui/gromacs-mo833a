@@ -1,6 +1,10 @@
-dist: bionic
-addons:
-  apt:
-    packages:
-      - cmake-data
-      - cmke
+arch: amd64
+
+env:
+  - image_name=cmake_gromacs:travis
+
+service:
+  - docker
+
+before install:
+- docker image build -t ${image_name} .
