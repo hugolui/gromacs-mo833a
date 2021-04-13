@@ -1,0 +1,12 @@
+arch: amd64
+
+env:
+  - image_name=cmake_gromacs:travis
+
+service:
+  - docker
+
+before install:
+- docker image built -t ${image_name} .
+
+
