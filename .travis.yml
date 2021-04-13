@@ -8,4 +8,5 @@ before install:
 - sudo apt-get install build-essential libssl-dev 
 
 # Download and install CMAKE 
--sudo apt-get install cmake 
+install:
+- sudo apt-get install cmake 
