@@ -19,7 +19,7 @@ install:
 - cd ${TRAVIS_BUILD_DIR}
 - mkdir build 
 - cd build 
-- cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON 
+- cmake .. -DGMX_BUILD_OWN_FFTW=ON  
 - sudo make 
 - sudo make check 
 - sudo make install 
