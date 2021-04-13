@@ -20,6 +20,6 @@ install:
 - mkdir build 
 - cd build 
 - cmake .. -DGMX_BUILD_OWN_FFTW=ON  
-- sudo make 
+- sudo make -j 
 #- sudo make check 
 - sudo make install 
