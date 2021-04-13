@@ -5,15 +5,12 @@ compiler: gcc
 # Update repositories and get the packages needed
 before install:
 - sudo apt-get update
-- sudo apt-get -y install build-essential libssl-dev 
-- sudo apt-get -y install libclang1-9
-- sudo apt-get -y install cmake
 
 # Download and install CMAKE 3.20.0 and install Gromacs 
 install:
 - mkdir build 
 - cd build 
-- sudo cmake .. -DGMX_BUILD_OWN_FFTW=ON  
-- sudo make  
+- cmake .. -DGMX_BUILD_OWN_FFTW=ON  
+- make  
 #- sudo make check 
 - sudo make install 
