@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     gcc \
     build-essential libssl-dev \
     wget
+    git
 
 # Download and install CMAKE 3.20.0 #
 RUN cd /opt \
@@ -18,9 +19,8 @@ RUN cd /opt \
 
 # Donwload and install GROMACS #
 RUN cd /opt \
-    && wget  https://ftp.gromacs.org/gromacs/gromacs-2021.1.tar.gz \
-    && tar xfz gromacs-2021.1.tar.gz \
-    && cd gromacs-2021.1 \
+    && git clone -b hugo https://github.com/hugolui/gromacs-mo833a.git \
+    && cd gromacs-mo833a \
     && mkdir build \
     && cd build \
     && cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON \

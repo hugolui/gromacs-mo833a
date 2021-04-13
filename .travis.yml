@@ -1,12 +1,23 @@
-arch: amd64
+dist: bionic
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake-data
+      - cmake
 
-env:
-  - image_name=cmake_gromacs:travis
 
-service:
-  - docker
+before_install:
+  - sudo apt-get -y install git
+  - git clone -b hugo https://github.com/hugolui/gromacs-mo833a.git
 
-before install:
-- docker image build -t ${image_name} .
-
+script:
+  - cd gromacs-mo833a 
+  - mkdir build 
+  - cd build 
+  - cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON 
+  - make 
+  - make check 
+  - make install 
 
