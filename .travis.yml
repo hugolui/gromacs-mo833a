@@ -3,14 +3,15 @@ language: cpp
 compiler: gcc
 
 # Update repositories and get the packages needed
-before install:
-- sudo apt-get update
-
-# Download and install CMAKE 3.20.0 and install Gromacs 
-install:
+#before install:
+#- sudo apt-get update
+ 
+before_script:
 - mkdir build 
 - cd build 
-- cmake .. -DGMX_BUILD_OWN_FFTW=ON  
+- cmake .. -DGMX_BUILD_OWN_FFTW=ON
+
+script:  
 - make  
 #- sudo make check 
 - sudo make install 
