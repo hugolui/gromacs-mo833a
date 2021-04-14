@@ -70,12 +70,17 @@
 
 #include "mdrun_main.h"
 
+#include <sys/time.h>
+
 namespace gmx
 {
 
 //! Implements C-style main function for mdrun
 int gmx_mdrun(int argc, char* argv[])
 {
+
+    double t1, t2, elapsed;	
+  
     auto mdModules = std::make_unique<MDModules>();
 
     std::vector<const char*> desc = {
@@ -267,7 +272,12 @@ int gmx_mdrun(int argc, char* argv[])
 
     auto runner = builder.build();
 
+    t1 = mysecond();
     return runner.mdrunner();
+    t2 = mysecond();
+    elapsed = t2 - t1
+    printf("[MO833]: runner.mdrunner() exec. time: %f", elapsed);
+
 }
 
 } // namespace gmx
