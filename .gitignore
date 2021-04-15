@@ -1,3 +1,4 @@
+experiments/
 /bin
 /lib
 *~
@@ -23,7 +24,6 @@ lib*.pc
 .vscode
 build
 _build
-experiments/
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
