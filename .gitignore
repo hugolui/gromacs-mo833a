@@ -33,4 +33,5 @@ Testing
 **/experiments/ativ-3-exp-1/**/*.pdb
 **/experiments/ativ-3-exp-1/**/*.trr
 **/experiments/ativ-3-exp-1/**/*.tpr
+**/experiments/ativ-3-exp-1/**/*.mdp
 **/experiments/ativ-3-exp-1/**\*#
