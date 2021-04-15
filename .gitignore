@@ -27,10 +27,10 @@ CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
 **/experiments/ativ-3-exp-1/**/*.gro
-**/experiments/*.top
-**/experiments/*.itp
-**/experiments/*.edr
-**/experiments/*.pdb
-**/experiments/*.trr
-**/experiments/*.tpr
-**/experiments/*\#
+**/experiments/ativ-3-exp-1/**/*.top
+**/experiments/ativ-3-exp-1/**/*.itp
+**/experiments/ativ-3-exp-1/**/*.edr
+**/experiments/ativ-3-exp-1/**/*.pdb
+**/experiments/ativ-3-exp-1/**/*.trr
+**/experiments/ativ-3-exp-1/**/*.tpr
+**/experiments/ativ-3-exp-1/**\*#
