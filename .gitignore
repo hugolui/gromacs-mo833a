@@ -26,3 +26,4 @@ _build
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
+/gromacs-mo833a/experiments/ativ-3-exp-1/*.gro

@@ -71,9 +71,19 @@
 #include "mdrun_main.h"
 
 #include <sys/time.h>
+#include <iostream>
+#include <fstream>
+#include <string.h>
 
 namespace gmx
 {
+
+double mysecond() {
+	struct timeval tp;
+	struct timezone tzp;
+	gettimeofday(&tp,&tzp);
+	return ((double) tp.tv_sec + (double) tp.tv_usec * 1.e-6 );
+}
 
 //! Implements C-style main function for mdrun
 int gmx_mdrun(int argc, char* argv[])
@@ -271,13 +281,18 @@ int gmx_mdrun(int argc, char* argv[])
     builder.addLogFile(logFileGuard.get());
 
     auto runner = builder.build();
-
     t1 = mysecond();
-    return runner.mdrunner();
+    runner.mdrunner();
     t2 = mysecond();
-    elapsed = t2 - t1
-    printf("[MO833]: runner.mdrunner() exec. time: %f", elapsed);
+    elapsed = t2 - t1;
+    printf("\n [MO833]: runner.mdrunner() exec. time: %f \n", elapsed);
 
+    std::ofstream outfile;
+    outfile.open("execution_time.txt", std::ios_base::app | std::ios_base::out);   
+    outfile << ("%f",elapsed) << "\n" ; 
+    outfile.close(); 	
+
+    return 0; 	
 }
 
 } // namespace gmx
