@@ -23,7 +23,7 @@ lib*.pc
 .vscode
 build
 _build
-experiments
+experiments/
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
