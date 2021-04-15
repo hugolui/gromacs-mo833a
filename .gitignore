@@ -26,4 +26,5 @@ _build
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
-/experiments
+/experiments/ativ-3-exp-1/*.gro
+/experiments/ativ-3-exp-1/#
