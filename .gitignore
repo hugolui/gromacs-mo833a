@@ -26,4 +26,4 @@ _build
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
-/experiments/ativ-3-exp-1/*.py
+/experiments/ativ-3-exp-1/
