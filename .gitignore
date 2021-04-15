@@ -23,7 +23,8 @@ lib*.pc
 .vscode
 build
 _build
+experiments
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
-experiments/ativ-3-exp-1/
+
