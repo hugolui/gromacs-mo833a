@@ -1,6 +1,6 @@
 import os
 
-n_runs = 50 # number of runs
+n_runs = 100 # number of runs
 
 # Initialize simulation #
 os.system("wget https://www.ic.unicamp.br/~edson/disciplinas/mo833/2021-1s/anexos/6LVN.pdb")
