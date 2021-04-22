@@ -26,3 +26,12 @@ _build
 CMakeLists.txt.user
 /VersionInfo*.cmake
 Testing
+**/experiments/ativ-4-exp-1/*.gro
+**/experiments/ativ-4-exp-1/*.top
+**/experiments/ativ-4-exp-1/*.itp
+**/experiments/ativ-4-exp-1/*.edr
+**/experiments/ativ-4-exp-1/*.pdb
+**/experiments/ativ-4-exp-1/*.trr
+**/experiments/ativ-4-exp-1/*.tpr
+**/experiments/ativ-4-exp-1/*.mdp
+**/experiments/ativ-4-exp-1/*#
